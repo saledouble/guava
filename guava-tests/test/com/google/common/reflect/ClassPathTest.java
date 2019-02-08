@@ -640,7 +640,7 @@ public class ClassPathTest extends TestCase {
     try {
       deleteRecursively(path);
     } catch (IOException e) {
-      log.log(WARNING, "Failure cleaning up test directory", e);
+      log.log(Level.FINEST, "Failure cleaning up test directory", e);
     }
   }
 }

@@ -424,7 +424,7 @@ public class ExecutionListBenchmark {
           executor.execute(runnable);
         } catch (RuntimeException e) {
           log.log(
-              Level.SEVERE,
+              Level.FINEST,
               "RuntimeException while executing runnable "
                   + runnable
                   + " with executor "
@@ -479,7 +479,7 @@ public class ExecutionListBenchmark {
         executor.execute(runnable);
       } catch (RuntimeException e) {
         log.log(
-            Level.SEVERE,
+            Level.FINEST,
             "RuntimeException while executing runnable " + runnable + " with executor " + executor,
             e);
       }
@@ -554,7 +554,7 @@ public class ExecutionListBenchmark {
         executor.execute(runnable);
       } catch (RuntimeException e) {
         log.log(
-            Level.SEVERE,
+            Level.FINEST,
             "RuntimeException while executing runnable " + runnable + " with executor " + executor,
             e);
       }
@@ -681,7 +681,7 @@ public class ExecutionListBenchmark {
           executor.execute(runnable);
         } catch (RuntimeException e) {
           log.log(
-              Level.SEVERE,
+              Level.FINEST,
               "RuntimeException while executing runnable "
                   + runnable
                   + " with executor "

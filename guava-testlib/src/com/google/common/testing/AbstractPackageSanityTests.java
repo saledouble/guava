@@ -383,7 +383,7 @@ public abstract class AbstractPackageSanityTests extends TestCase {
         cls = classInfo.load();
       } catch (NoClassDefFoundError e) {
         // In case there were linking problems, this is probably not a class we care to test anyway.
-        logger.log(Level.SEVERE, "Cannot load class " + classInfo + ", skipping...", e);
+        logger.log(Level.FINEST, "Cannot load class " + classInfo + ", skipping...", e);
         continue;
       }
       if (!cls.isInterface()) {

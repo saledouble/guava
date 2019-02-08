@@ -101,7 +101,7 @@ final class InterruptionUtil {
             Thread.interrupted();
             if (interruptingThread.isAlive()) {
               // This will be hidden by test-output redirection:
-              logger.severe("InterruptenatorTask did not exit; future tests may be affected");
+              logger.finest("InterruptenatorTask did not exit; future tests may be affected");
               /*
                * This won't do any good under JUnit 3, but I'll leave it around in
                * case we ever switch to JUnit 4:
