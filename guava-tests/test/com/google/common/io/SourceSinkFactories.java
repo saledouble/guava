@@ -309,7 +309,7 @@ public class SourceSinkFactories {
 
     public final void tearDown() throws IOException {
       if (!fileThreadLocal.get().delete()) {
-        logger.warning("Unable to delete file: " + fileThreadLocal.get());
+        logger.finest("Unable to delete file: " + fileThreadLocal.get());
       }
       fileThreadLocal.remove();
     }
