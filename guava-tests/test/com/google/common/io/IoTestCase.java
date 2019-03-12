@@ -184,7 +184,7 @@ public abstract class IoTestCase extends TestCase {
     }
 
     if (!file.delete()) {
-      logger.log(Level.WARNING, "couldn't delete file: {0}", new Object[] {file});
+      logger.log(Level.FINEST, "couldn't delete file: {0}", new Object[] {file});
       return false;
     }
 
