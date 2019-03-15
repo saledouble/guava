@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//target/guava-gwt-sources=UTF-8
+encoding//target/guava-test-gwt-sources=UTF-8
 encoding/<project>=UTF-8
 encoding/src=UTF-8
 encoding/src-super=UTF-8

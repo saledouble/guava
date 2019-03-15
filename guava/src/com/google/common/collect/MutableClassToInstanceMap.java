@@ -156,8 +156,8 @@ public final class MutableClassToInstanceMap<B> extends ForwardingMap<Class<? ex
   }
 
   @CanIgnoreReturnValue
-  private static <B, T extends B> T cast(Class<T> type, B value) {
-    return Primitives.wrap(type).cast(value);
+  private static <B, T extends B> T cast(Class<? extends B> class1, B b) {
+    return (T) Primitives.wrap(class1).cast(b);
   }
 
   private Object writeReplace() {

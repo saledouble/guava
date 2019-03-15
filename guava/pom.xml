@@ -8,7 +8,7 @@
     <version>HEAD-jre-SNAPSHOT</version>
   </parent>
   <artifactId>guava</artifactId>
-  <packaging>bundle</packaging>
+<!--  <packaging>bundle</packaging> --> 
   <name>Guava: Google Core Libraries for Java</name>
   <description>
     Guava is a suite of core and expanded libraries that include
@@ -62,7 +62,7 @@
           </archive>
         </configuration>
       </plugin>
-      <plugin>
+      <!--  <plugin>
         <extensions>true</extensions>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
@@ -92,7 +92,7 @@
             <Bundle-DocURL>https://github.com/google/guava/</Bundle-DocURL>
           </instructions>
         </configuration>
-      </plugin>
+      </plugin>-->
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
       </plugin>
