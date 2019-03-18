@@ -550,7 +550,7 @@ public final class ClassPath {
         throws IOException {
       File[] files = directory.listFiles();
       if (files == null) {
-        logger.warning("Cannot read directory " + directory);
+        logger.finest("Cannot read directory " + directory);
         // IO error, just skip the directory
         return;
       }
