@@ -207,7 +207,7 @@ public final class ServiceManager {
       // Having no services causes the manager to behave strangely. Notably, listeners are never
       // fired. To avoid this we substitute a placeholder service.
       logger.log(
-          Level.WARNING,
+          Level.FINEST,
           "ServiceManager configured with no services.  Is your application configured properly?",
           new EmptyServiceManagerWarning());
       copy = ImmutableList.<Service>of(new NoOpService());
@@ -679,7 +679,7 @@ public final class ServiceManager {
           // N.B. if we miss the STARTING event then we may never record a startup time.
           stopwatch.stop();
           if (!(service instanceof NoOpService)) {
-            logger.log(Level.FINE, "Started {0} in {1}.", new Object[] {service, stopwatch});
+            logger.log(Level.FINEST, "Started {0} in {1}.", new Object[] {service, stopwatch});
           }
         }
         // Queue our listeners
@@ -771,7 +771,7 @@ public final class ServiceManager {
       if (state != null) {
         state.transitionService(service, NEW, STARTING);
         if (!(service instanceof NoOpService)) {
-          logger.log(Level.FINE, "Starting {0}.", service);
+          logger.log(Level.FINEST, "Starting {0}.", service);
         }
       }
     }
@@ -798,7 +798,7 @@ public final class ServiceManager {
       if (state != null) {
         if (!(service instanceof NoOpService)) {
           logger.log(
-              Level.FINE,
+              Level.FINEST,
               "Service {0} has terminated. Previous state was: {1}",
               new Object[] {service, from});
         }
@@ -820,7 +820,7 @@ public final class ServiceManager {
         log &= from != State.STARTING;
         if (log) {
           logger.log(
-              Level.SEVERE,
+              Level.FINEST,
               "Service " + service + " has failed in the " + from + " state.",
               failure);
         }

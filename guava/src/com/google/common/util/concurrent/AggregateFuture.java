@@ -192,7 +192,7 @@ abstract class AggregateFuture<InputT, OutputT> extends AbstractFuture.TrustedFu
             (throwable instanceof Error)
                 ? "Input Future failed with Error"
                 : "Got more than one input Future failure. Logging failures after the first";
-        logger.log(Level.SEVERE, message, throwable);
+        logger.log(Level.FINEST, message, throwable);
       }
     }
 
