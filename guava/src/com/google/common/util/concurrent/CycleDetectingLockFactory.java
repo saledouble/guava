@@ -213,7 +213,7 @@ public class CycleDetectingLockFactory {
     WARN {
       @Override
       public void handlePotentialDeadlock(PotentialDeadlockException e) {
-        logger.log(Level.SEVERE, "Detected potential deadlock", e);
+        logger.log(Level.FINEST, "Detected potential deadlock", e);
       }
     },
 
