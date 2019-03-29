@@ -42,6 +42,8 @@ public class TestLogHandlerTest extends TestCase {
 
     ExampleClassUnderTest.logger.setUseParentHandlers(false); // optional
 
+    ExampleClassUnderTest.logger.setLevel(Level.ALL); // log all messages.
+
     stack.addTearDown(
         new TearDown() {
           @Override
@@ -56,7 +58,7 @@ public class TestLogHandlerTest extends TestCase {
     assertTrue(handler.getStoredLogRecords().isEmpty());
     ExampleClassUnderTest.foo();
     LogRecord record = handler.getStoredLogRecords().get(0);
-    assertEquals(Level.INFO, record.getLevel());
+    assertEquals(Level.FINEST, record.getLevel());
     assertEquals("message", record.getMessage());
     assertSame(EXCEPTION, record.getThrown());
   }
@@ -93,7 +95,7 @@ public class TestLogHandlerTest extends TestCase {
     static final Logger logger = Logger.getLogger(ExampleClassUnderTest.class.getName());
 
     static void foo() {
-      logger.log(Level.INFO, "message", EXCEPTION);
+      logger.log(Level.FINEST, "message", EXCEPTION);
     }
   }
 }
